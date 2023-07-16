@@ -29,6 +29,7 @@ class ChainExecutor(BaseExecutor):
         self, inputs: dict, callbacks: Callbacks = None, **kwargs: Any
     ) -> StepResponse:
         """Take step."""
+        print(f'\n\nmy inputs: {inputs}\n')
         response = self.chain.run(**inputs, callbacks=callbacks)
         return StepResponse(response=response)
 
